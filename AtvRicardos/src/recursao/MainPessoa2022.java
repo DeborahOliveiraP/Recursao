@@ -21,7 +21,7 @@ public class MainPessoa2022 {
 
 		public static void main(String[]args) {
 			Pessoa p7=new Pessoa();
-			p7.nome="Adao";
+			p7.nome="Adao ";
 			p7.filhoA=null;
 			p7.filhoB=null;
 			
