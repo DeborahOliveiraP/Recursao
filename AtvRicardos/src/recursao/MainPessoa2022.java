@@ -4,7 +4,7 @@ public class MainPessoa2022 {
 
 		public static void imprimeFilhos(Pessoa pai) {
 
-				if(pai.filhoA!=null || pai.filhoB!=null ) {
+				if(pai.filhoA!=null) {
 					
 					 if(pai.filhoA != null) {
 							imprimeFilhos(pai.filhoA);
