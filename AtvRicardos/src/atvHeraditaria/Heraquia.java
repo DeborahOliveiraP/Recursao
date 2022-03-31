@@ -4,12 +4,13 @@ public class Heraquia {
 	
 	public static void imprimeFilhos(Pessoa pai) {
 
+		/* Rodar apenas Filhos A & B
 	     if(pai.filhoA!=null || pai.filhoB!=null ) {
 				System.out.println("-----------------------");
 				System.out.println("Pai: "+pai.nome);
 				System.out.println("FilhoA: "+pai.filhoA.nome);
-				System.out.println("FilhoB: "+pai.filhoB.nome);
-				
+			    System.out.println("FilhoB: "+pai.filhoB.nome);
+			    
 			   if(pai.filhoA != null) 
 				imprimeFilhos(pai.filhoA);
 				
@@ -17,7 +18,36 @@ public class Heraquia {
 				imprimeFilhos(pai.filhoB);
 	
 			}
-		}
+		}*/
+	
+//Roda Pai,Filhos A/B, e Ancestrais 
+	if(pai.filhoA!=null || pai.filhoB!=null ) {
+		
+		 if(pai.filhoA != null) {
+				imprimeFilhos(pai.filhoA);
+		 }    
+		 
+		 if(pai.filhoB!=null) { 
+				imprimeFilhos(pai.filhoB);
+	}
+           if(pai.ancestral != null) {
+				System.out.println("Pai: "+pai.nome);
+				System.out.println("FilhoA: "+pai.filhoA.nome);
+				System.out.println("FilhoB: "+pai.filhoB.nome);
+				System.out.println("Ancestral: "+pai.ancestral.nome);	
+				System.out.println("-----------------------");
+           }
+				else {
+					System.out.println("Pai: "+pai.nome);
+					System.out.println("FilhoA: "+pai.filhoA.nome);
+					System.out.println("FilhoB: "+pai.filhoB.nome);
+					System.out.println("Ancestral: N/A ");	
+					System.out.println("-----------------------");
+				}
+					
+	}
+   }
+
 
 	public static void main(String[]args) {
 		//Pai
@@ -82,10 +112,61 @@ public class Heraquia {
 				
 		p02.filhoB=p06;
 		
+		//Amanda FilhoA
+		Pessoa p07=new Pessoa();
+		p07.nome="Ana Clara";
+		p07.filhoA=null;
+		p07.filhoB=null;
+		p07.ancestral=p05;
+				
+		p05.filhoA=p07;
+		
+		//Amanda FilhoB
+		Pessoa p08=new Pessoa();
+		p08.nome="Julia";
+		p08.filhoA=null;
+		p08.filhoB=null;
+		p08.ancestral=p05;
+						
+		p05.filhoB=p08;
+				
+		//Gabriel FilhoA
+		Pessoa p09=new Pessoa();
+		p09.nome="Gabriel Junior";
+		p09.filhoA=null;
+		p09.filhoB=null;
+		p09.ancestral=p06;
+				
+		p06.filhoA=p09;
+		
+		//Gabriel FilhoB
+		Pessoa p010=new Pessoa();
+		p010.nome="Pedro";
+		p010.filhoA=null;
+		p010.filhoB=null;
+		p010.ancestral=p06;
+				
+		p06.filhoB=p010;
 		
 		imprimeFilhos(p0);
 
+		//Jose FilhoA
+		Pessoa p011=new Pessoa();
+		p011.nome="Laura";
+		p011.filhoA=null;
+		p011.filhoB=null;
+		p011.ancestral=p03;
+			
+		p03.filhoA=p011;
+		
+		//Jose FilhoB
+		Pessoa p012=new Pessoa();
+		p012.nome="Maria";
+		p012.filhoA=null;
+		p012.filhoB=null;
+		p012.ancestral=p03;
 	 
+		p03.filhoB=p012;
 		
 		 
 		

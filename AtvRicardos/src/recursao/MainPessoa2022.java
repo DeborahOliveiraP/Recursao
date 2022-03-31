@@ -4,26 +4,39 @@ public class MainPessoa2022 {
 
 		public static void imprimeFilhos(Pessoa pai) {
 
-		     if(pai.filhoA!=null || pai.filhoB!=null ) {
-					System.out.println("Pai: "+pai.nome);
-					System.out.println("FilhoA: "+pai.filhoA.nome);
-					System.out.println("-----------------------");
+				if(pai.filhoA!=null || pai.filhoB!=null ) {
 					
-				   if(pai.filhoA != null) {
-					imprimeFilhos(pai.filhoA);
-		           }
-					if(pai.ancestral != null ) {
-					System.out.println("Ancestral: "+pai.ancestral.nome);
-					}
-		     }
-				}
+					 if(pai.filhoA != null) {
+							imprimeFilhos(pai.filhoA);
+				           }
+					 
+			           if(pai.ancestral == null) {
+			        	   System.out.println("Pai: "+pai.nome);
+							System.out.println("FilhoA: "+pai.filhoA.nome);
+							System.out.println("Ancestral: N/A ");	
+							System.out.println("-----------------------");
+					
+			           }
+							else {
+								
+								System.out.println("Pai: "+pai.nome);
+								System.out.println("FilhoA: "+pai.filhoA.nome);
+								System.out.println("Ancestral: "+pai.ancestral.nome);
+								System.out.println("-----------------------");
+							
+							}
+				   }
+			}
 			
+
+
 
 		public static void main(String[]args) {
 			Pessoa p7=new Pessoa();
 			p7.nome="Adao ";
 			p7.filhoA=null;
 			p7.filhoB=null;
+			p7.ancestral=null;
 			
 			Pessoa p0=new Pessoa();
 			p0.nome="Cain";
