@@ -27,7 +27,7 @@ public class Heraquia {
 				imprimeFilhos(pai.filhoA);
 		 }    
 		 
-		 if(pai.filhoB!=null) { 
+		 if(pai.filhoB !=null) { 
 				imprimeFilhos(pai.filhoB);
 	}
            if(pai.ancestral != null) {
